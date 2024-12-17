@@ -10,6 +10,51 @@
 body {
     margin: 0;
     padding: 0;
+    // letter-spacing: 0.01rem;
+    line-height: 2rem;
     // @include mi.flexcol-center;
     // width: 100%;
+}
+
+input {
+    border: 2px solid #BBC8D4;
+    border-radius: 0.2rem;
+}
+
+
+::-webkit-scrollbar {
+    width: 10px;
+    cursor: pointer;
+}
+
+::-webkit-scrollbar:hover {
+    cursor: pointer;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #6e6e6e;
+    cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+    cursor: pointer;
+}
+
+h1 {
+    margin: 0;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
 }

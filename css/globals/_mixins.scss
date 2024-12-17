@@ -1,4 +1,5 @@
-@import 'variables';
+// @import 'variables';
+@use './variables' as vars;
 
 @mixin flex-center {
     display: flex;
@@ -11,6 +12,13 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+@mixin font-style($size, $weight, $color, $family: vars.$font-open-sans) {
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+    font-family: $family;
 }
 
 @mixin respo($breakpoint) {

@@ -12,9 +12,7 @@
             @include mi.flexcol-center;
 
             &__title {
-                font-family: vars.$font-mulish;
-                font-weight: 600;
-                font-size: 3rem;
+                @include mi.font-style(3rem, 600, vars.$font-white, vars.$font-mulish);
 
                 @include mi.respo('mobile') {
                     font-size: 2rem;
@@ -24,12 +22,10 @@
             }
 
             &__desc {
-                font-family: vars.$font-open-sans;
-                font-weight: 400;
-                font-size: 1.2rem;
-                margin-top: 1rem;
+                @include mi.font-style(1.2rem, 400, vars.$font-white, vars.$font-open-sans);
+                margin-top: 2rem;
                 text-align: center;
-                width: 50%;
+                width: 55%;
 
                 @include mi.respo('tablet') {
                     width: 100%;
@@ -38,13 +34,11 @@
 
             &__input {
                 background-color: vars.$font-white;
-                border: none;
-                padding: 0.5rem 1rem;
+                // border: none;
+                padding: 1rem 1rem;
                 margin-top: 1rem;
-                color: vars.$font-2;
                 width: 20rem;
-                font-size: 1.2rem;
-                color: vars.$font-2;
+                @include mi.font-style(1.2rem, 400, vars.$font-gray, vars.$font-open-sans);
 
                 @include mi.respo('tablet') {
                     width: 15rem;
@@ -57,7 +51,7 @@
     &__contact {
         background-color: vars.$font-white;
         color: vars.$secondary-color;
-        padding: 4rem;
+        padding: 4rem 8rem;
         display: flex;
 
         @include mi.respo('mobile') {
@@ -88,7 +82,7 @@
             width: 50%;
             justify-content: end;
             align-items: center;
-            gap: 0.6rem;
+            gap: 1.5rem;
 
             @include mi.respo('mobile') {
                 width: 100%;
@@ -96,8 +90,8 @@
             }
 
             &__icon {
-                width: 1.2rem;
-                height: 1.2rem;
+                width: 2rem;
+                height: 2rem;
                 object-fit: contain;
             }
         }

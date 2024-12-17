@@ -13,11 +13,9 @@
   @include mi.flexcol-center;
 
   &__title h1 {
-    font-size: 3rem;
-    font-family: vars.$font-mulish;
-    font-weight: 400;
-    margin: 0;
+    @include mi.font-style(3rem, 400, vars.$secondary-color, vars.$font-mulish);
     text-align: center;
+    line-height: 3.5rem;
   }
 
   &__line {
@@ -34,6 +32,7 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    // overflow-x: scroll;
     width: 90%;
 
 
@@ -120,24 +119,22 @@
       }
 
       &__name {
-        font-size: 1.2rem;
-        font-weight: 600;
         margin: 0;
-        color: vars.$font-2;
+        @include mi.font-style(1.2rem, 600, vars.$font-2);
+
       }
 
       &__role {
-        font-size: 1rem;
         margin: 0;
-        color: vars.$font-2;
+        @include mi.font-style(1rem, 400, vars.$font-2);
+
       }
 
       &__desc {
-        font-size: 1.2rem;
         margin: 2rem 0;
         text-align: start;
-        font-family: vars.$font-open-sans;
-        color: vars.$font-2;
+        @include mi.font-style(1.2rem, 400, vars.$font-2);
+
       }
     }
   }

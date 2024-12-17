@@ -2,6 +2,7 @@
   font-family: "Mulish", sans-serif;
   background-color: #FFFFFF;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   position: relative;
@@ -11,8 +12,21 @@
 @media only screen and (max-width: 48rem) {
   .navbar {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    z-index: 50;
+    width: 100%;
+    padding: 1rem 0;
+    top: 0;
+    left: 0;
+  }
+  .navbar__logo {
+    margin-left: 2rem;
+  }
+  .navbar__toggle {
+    margin-right: 2rem;
   }
 }
 .navbar__logo {
@@ -26,8 +40,8 @@
 }
 @media only screen and (max-width: 48rem) {
   .navbar__logo img {
-    width: 4rem;
-    height: 4rem;
+    width: 2rem;
+    height: 2rem;
   }
 }
 .navbar__title {
@@ -38,7 +52,7 @@
 }
 @media only screen and (max-width: 48rem) {
   .navbar__title {
-    font-size: 0.5rem;
+    font-size: 0.4rem;
     margin: 0;
   }
 }
@@ -81,19 +95,19 @@
 .navbar__toggle span {
   display: block;
   width: 100%;
-  height: 0.25rem;
+  height: 0.15rem;
   background-color: #553D67;
   margin: 0.3rem 0;
   transition: all 0.3s ease;
 }
 .navbar__toggle--active span:nth-child(1) {
-  transform: translateY(0.6rem) rotate(45deg);
+  transform: translateY(0.5rem) rotate(45deg);
 }
 .navbar__toggle--active span:nth-child(2) {
   opacity: 0;
 }
 .navbar__toggle--active span:nth-child(3) {
-  transform: translateY(-0.6rem) rotate(-45deg);
+  transform: translateY(-0.5rem) rotate(-45deg);
 }
 .navbar__overlay {
   display: none;
@@ -130,7 +144,7 @@
     display: block;
   }
 }
-@media only screen and (max-width: 56.25rem) {
+@media only screen and (max-width: 48rem) {
   .navbar__list {
     flex-direction: column;
     gap: 2rem;
@@ -163,24 +177,27 @@
   font-family: "Mulish", sans-serif;
   text-align: center;
   margin: 0;
+  line-height: 3.5rem;
 }
 .hero__desc {
+  font-size: 1.2rem;
+  font-weight: 700;
   color: #FFFFFF;
   font-family: "Open Sans", sans-serif;
   text-align: center;
-  font-weight: 700;
-  font-size: 1.2rem;
   margin-bottom: 3rem;
 }
 .hero__form {
   width: 100%;
   display: flex;
+  gap: 1rem;
 }
 @media only screen and (max-width: 56.25rem) {
   .hero__form {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
+    width: 100%;
   }
   .hero__form__input {
     width: 100%;
@@ -189,12 +206,14 @@
 .hero__form__input {
   padding: 1rem;
   border-radius: 0.2rem;
-  border: none;
-  font-family: "Open Sans", sans-serif;
+  width: 100%;
   font-size: 1rem;
+  font-weight: 500;
+  color: rgba(73, 92, 118, 0.6980392157);
+  font-family: "Open Sans", sans-serif;
 }
 .hero__form__btn {
-  padding: 1rem;
+  padding: 1rem 2rem;
   border-radius: 0.2rem;
   background-color: #F64C72;
   white-space: nowrap;
@@ -213,11 +232,12 @@
 }
 .about__content {
   max-width: 60rem;
+  padding: 3rem 0;
   text-align: center;
   margin-top: -10rem;
   z-index: 1;
   background-color: #FFFFFF;
-  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
   border-radius: 0.2rem;
 }
 @media only screen and (max-width: 56.25rem) {
@@ -232,13 +252,12 @@
   justify-content: center;
   gap: 1rem;
   padding: 2rem;
-  color: #553D67;
 }
 .about__title h1 {
   font-size: 3rem;
-  font-family: "Mulish", sans-serif;
   font-weight: 400;
-  margin: 0;
+  color: #553D67;
+  font-family: "Mulish", sans-serif;
 }
 .about__line {
   width: 10rem;
@@ -251,11 +270,12 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0 10rem;
+  padding: 0 8rem;
   text-align: center;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #6D7D8B;
   font-family: "Open Sans", sans-serif;
-  color: rgba(73, 92, 118, 0.6980392157);
-  font-size: 1.2rem;
 }
 @media only screen and (max-width: 56.25rem) {
   .about__desc {
@@ -268,11 +288,12 @@
 .about__progress {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   gap: 2rem;
   padding: 2rem;
   position: relative;
   margin-top: 1.5rem;
+  margin: 0 2rem;
 }
 @media only screen and (max-width: 56.25rem) {
   .about__progress {
@@ -312,14 +333,14 @@
   background-color: #FFFFFF;
 }
 .about__progress__circle img {
-  width: 1.2rem;
-  height: 1.2rem;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 .about__progress__title {
-  font-family: "Open Sans", sans-serif;
   font-size: 1.2rem;
   font-weight: 400;
-  color: rgba(73, 92, 118, 0.6980392157);
+  color: #6D7D8B;
+  font-family: "Open Sans", sans-serif;
   text-transform: uppercase;
   width: 60%;
   text-align: start;
@@ -340,7 +361,8 @@
   margin-bottom: -8rem;
   z-index: 1;
   gap: 1.5rem;
-  width: 100%;
+  width: 95%;
+  margin: 0 4rem -8rem 4rem;
   max-width: 1140px;
 }
 @media only screen and (max-width: 56.25rem) {
@@ -353,10 +375,10 @@
 }
 .achievements__card {
   background-color: #FFFFFF;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
   text-align: center;
-  width: 20rem;
-  padding: 2rem;
+  width: 24rem;
+  padding: 2rem 1rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .achievements__card:hover {
@@ -374,15 +396,16 @@
 }
 .achievements__card__content__title {
   font-size: 1.5rem;
-  font-family: "Mulish", sans-serif;
-  color: #553D67;
   font-weight: 400;
+  color: #553D67;
+  font-family: "Mulish", sans-serif;
   margin-bottom: 0.5rem;
 }
 .achievements__card__content__desc {
   font-size: 1.2rem;
+  font-weight: 300;
+  color: #6D7D8B;
   font-family: "Open Sans", sans-serif;
-  color: rgba(73, 92, 118, 0.6980392157);
 }
 .achievements__main {
   width: 100%;
@@ -397,12 +420,16 @@
 }
 .achievements__main__title {
   font-size: 2.5rem;
+  font-weight: 700;
+  color: #FFFFFF;
   font-family: "Mulish", sans-serif;
-  margin-bottom: 0.5rem;
+  margin: 2rem 0 1rem 0;
 }
 .achievements__main__desc {
-  font-size: 1.1rem;
   width: 50%;
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #FFFFFF;
   font-family: "Open Sans", sans-serif;
   text-align: center;
 }
@@ -440,13 +467,19 @@
   justify-content: center;
 }
 .achievements__main__numbers__number__value {
-  font-size: 2.5rem;
   margin: 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #FFFFFF;
   font-family: "Mulish", sans-serif;
 }
 .achievements__main__numbers__number__desc {
   margin: 0;
   font-size: 0.8rem;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #FFFFFF;
   font-family: "Open Sans", sans-serif;
   text-transform: uppercase;
 }
@@ -464,9 +497,9 @@
 }
 .services__title h1 {
   font-size: 3rem;
-  font-family: "Mulish", sans-serif;
   font-weight: 400;
-  margin: 0;
+  color: #553D67;
+  font-family: "Mulish", sans-serif;
 }
 .services__line {
   width: 5rem;
@@ -484,7 +517,7 @@
   .services__cards {
     padding: 2rem 2rem;
     margin: 0rem;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 @media only screen and (max-width: 56.25rem) {
@@ -517,14 +550,16 @@
   margin-bottom: 1rem;
 }
 .services__card__content__title {
+  margin-bottom: 0.5rem;
   font-size: 1.6rem;
   font-weight: 400;
-  margin-bottom: 0.5rem;
+  color: #553D67;
   font-family: "Mulish", sans-serif;
 }
 .services__card__content__desc {
+  line-height: 1.6rem;
   font-size: 1.2rem;
-  line-height: 1.5rem;
+  font-weight: 400;
   color: rgba(73, 92, 118, 0.6980392157);
   font-family: "Open Sans", sans-serif;
 }
@@ -563,26 +598,32 @@
   }
 }
 .mission__right__title {
-  color: #FFFFFF;
+  margin-bottom: 2rem;
   font-size: 2.8rem;
   font-weight: 700;
-  margin-bottom: 2rem;
+  color: #FFFFFF;
   font-family: "Mulish", sans-serif;
   text-transform: uppercase;
 }
 .mission__right__desc {
-  color: #FFFFFF;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-family: "Mulish", sans-serif;
   text-align: center;
   width: 70%;
-  font-size: 1.2rem;
   line-height: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #FFFFFF;
+  font-family: "Mulish", sans-serif;
 }
 @media only screen and (max-width: 56.25rem) {
+  .mission__right__desc {
+    width: 60%;
+  }
+}
+@media only screen and (max-width: 48rem) {
   .mission__right__desc {
     width: 90%;
   }
@@ -594,6 +635,7 @@
   background-color: #F64C72;
   border: 2px solid #FFFFFF;
   font-size: 1rem;
+  font-weight: 400;
   color: #FFFFFF;
   font-family: "Mulish", sans-serif;
 }
@@ -615,9 +657,10 @@
 }
 .team__title h1 {
   font-size: 3rem;
-  font-family: "Mulish", sans-serif;
+  font-size: 3rem;
   font-weight: 400;
-  margin: 0;
+  color: #553D67;
+  font-family: "Mulish", sans-serif;
 }
 .team__line {
   width: 5rem;
@@ -626,9 +669,9 @@
 }
 .team__carousel {
   position: relative;
-  overflow: hidden;
   padding: 2rem;
   margin: 0 2rem;
+  overflow-x: scroll;
 }
 .team__carousel__track {
   display: flex;
@@ -652,6 +695,9 @@
   width: 100%;
   height: 15rem;
   border-radius: 0.5rem 0.5rem 0 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-position: center top;
 }
 @media only screen and (max-width: 48rem) {
   .team__carousel__card {
@@ -663,23 +709,25 @@
   padding: 0.5rem 1.5rem;
 }
 .team__carousel__card__content__name {
-  font-size: 1.5rem;
-  font-family: "Mulish", sans-serif;
   text-align: start;
   margin-bottom: 0;
+  font-size: 1.5rem;
   font-weight: 600;
   color: #553D67;
+  font-family: "Mulish", sans-serif;
 }
 .team__carousel__card__content__role {
-  font-size: 1rem;
-  color: rgba(73, 92, 118, 0.6980392157);
   margin-top: 0.2rem;
   margin-bottom: 1rem;
+  font-size: 1rem;
+  font-weight: 400;
+  color: rgba(73, 92, 118, 0.6980392157);
   font-family: "Open Sans", sans-serif;
   text-align: start;
 }
 .team__carousel__card__content__desc {
-  font-size: 0.9rem;
+  font-size: 1.2rem;
+  font-weight: 400;
   color: rgba(73, 92, 118, 0.6980392157);
   font-family: "Open Sans", sans-serif;
   text-align: start;
@@ -698,11 +746,13 @@
 }
 .team__buttons__btn {
   background: #FFFFFF;
+  font-size: 1.2rem;
+  font-weight: 500;
   color: #553D67;
+  font-family: "Open Sans", sans-serif;
   padding: 0.5rem 1rem;
   cursor: pointer;
   border: none;
-  font-size: 1.2rem;
 }
 
 .testimonials {
@@ -722,10 +772,11 @@
 }
 .testimonials__title h1 {
   font-size: 3rem;
-  font-family: "Mulish", sans-serif;
   font-weight: 400;
-  margin: 0;
+  color: #553D67;
+  font-family: "Mulish", sans-serif;
   text-align: center;
+  line-height: 3.5rem;
 }
 .testimonials__line {
   width: 5rem;
@@ -815,22 +866,26 @@
   align-items: start;
 }
 .testimonials__card__content__name {
+  margin: 0;
   font-size: 1.2rem;
   font-weight: 600;
-  margin: 0;
   color: rgba(73, 92, 118, 0.6980392157);
+  font-family: "Open Sans", sans-serif;
 }
 .testimonials__card__content__role {
-  font-size: 1rem;
   margin: 0;
+  font-size: 1rem;
+  font-weight: 400;
   color: rgba(73, 92, 118, 0.6980392157);
+  font-family: "Open Sans", sans-serif;
 }
 .testimonials__card__content__desc {
-  font-size: 1.2rem;
   margin: 2rem 0;
   text-align: start;
-  font-family: "Open Sans", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
   color: rgba(73, 92, 118, 0.6980392157);
+  font-family: "Open Sans", sans-serif;
 }
 
 .footer__cta {
@@ -848,9 +903,10 @@
   justify-content: center;
 }
 .footer__cta__content__title {
-  font-family: "Mulish", sans-serif;
-  font-weight: 600;
   font-size: 3rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  font-family: "Mulish", sans-serif;
   text-align: center;
 }
 @media only screen and (max-width: 48rem) {
@@ -859,12 +915,13 @@
   }
 }
 .footer__cta__content__desc {
-  font-family: "Open Sans", sans-serif;
-  font-weight: 400;
   font-size: 1.2rem;
-  margin-top: 1rem;
+  font-weight: 400;
+  color: #FFFFFF;
+  font-family: "Open Sans", sans-serif;
+  margin-top: 2rem;
   text-align: center;
-  width: 50%;
+  width: 55%;
 }
 @media only screen and (max-width: 56.25rem) {
   .footer__cta__content__desc {
@@ -873,13 +930,13 @@
 }
 .footer__cta__content__input {
   background-color: #FFFFFF;
-  border: none;
-  padding: 0.5rem 1rem;
+  padding: 1rem 1rem;
   margin-top: 1rem;
-  color: rgba(73, 92, 118, 0.6980392157);
   width: 20rem;
   font-size: 1.2rem;
-  color: rgba(73, 92, 118, 0.6980392157);
+  font-weight: 400;
+  color: #6D7D8B;
+  font-family: "Open Sans", sans-serif;
 }
 @media only screen and (max-width: 56.25rem) {
   .footer__cta__content__input {
@@ -889,7 +946,7 @@
 .footer__contact {
   background-color: #FFFFFF;
   color: #553D67;
-  padding: 4rem;
+  padding: 4rem 8rem;
   display: flex;
 }
 @media only screen and (max-width: 48rem) {
@@ -921,7 +978,7 @@
   width: 50%;
   justify-content: end;
   align-items: center;
-  gap: 0.6rem;
+  gap: 1.5rem;
 }
 @media only screen and (max-width: 48rem) {
   .footer__contact__socials {
@@ -932,8 +989,8 @@
   }
 }
 .footer__contact__socials__icon {
-  width: 1.2rem;
-  height: 1.2rem;
+  width: 2rem;
+  height: 2rem;
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -947,4 +1004,47 @@
 body {
   margin: 0;
   padding: 0;
+  line-height: 2rem;
+}
+
+input {
+  border: 2px solid #BBC8D4;
+  border-radius: 0.2rem;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar:hover {
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #6e6e6e;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+  cursor: pointer;
+}
+
+h1 {
+  margin: 0;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
 }/*# sourceMappingURL=main.css.map */

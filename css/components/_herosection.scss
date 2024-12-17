@@ -19,32 +19,29 @@
     }
 
     &__title {
-        font-size: 3rem;
-        font-weight: 800;
-        color: vars.$font-white;
-        font-family: vars.$font-mulish;
+        @include mi.font-style(3rem, 800, vars.$font-white, vars.$font-mulish);
         text-align: center;
         margin: 0;
+        line-height: 3.5rem;
         // margin-bottom: 2.4rem;
     }
 
     &__desc {
-        color: vars.$font-white;
-        font-family: vars.$font-open-sans;
+        @include mi.font-style(1.2rem, 700, vars.$font-white);
         text-align: center;
-        font-weight: 700;
-        font-size: 1.2rem;
         margin-bottom: 3rem;
     }
 
     &__form {
         width: 100%;
         display: flex;
+        gap: 1rem;
         
         @include mi.respo('tablet') {
             flex-direction: column;
             align-items: center;
             gap: 1rem;
+            width: 100%;
             &__input {
                 width: 100%;
             }
@@ -52,12 +49,11 @@
         &__input {
             padding: 1rem;
             border-radius: 0.2rem;
-            border: none;
-            font-family: vars.$font-open-sans;
-            font-size: 1rem;
+            width: 100%;
+            @include mi.font-style(1rem, 500, vars.$font-2, vars.$font-open-sans);
         }
         &__btn {
-            padding: 1rem;
+            padding: 1rem 2rem;
             border-radius: 0.2rem;
             background-color: vars.$bg-color;
             white-space: nowrap;
