@@ -1,0 +1,142 @@
+@use '../globals/mixins' as mi;
+@use '../globals/variables' as vars;
+
+.testimonials {
+    margin: 5rem 0;
+    &__title {
+      @include mi.flexcol-center;
+      gap: 1rem;
+      padding: 2rem;
+    }
+    @include mi.flexcol-center;
+  
+    &__title h1 {
+      font-size: 3rem;
+      font-family: vars.$font-mulish;
+      font-weight: 400;
+      margin: 0;
+      text-align: center;
+    }
+  
+    &__line {
+      width: 5rem;
+      height: 0.2rem;
+      background-color: vars.$primary-color;
+    }
+  
+    &__carousel {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      width: 90%;
+
+      .testimonials__cards {
+        display: flex;
+        transition: transform 0.3s ease-in-out;
+        gap: 2rem;
+        
+      }
+
+      &__btns{
+        display: flex;
+        gap: 1rem;
+        margin-top: 1rem;
+        align-items: end;
+        justify-content: end;
+        width: 90%;
+      }
+  
+      .testimonials__carousel__btn {
+        background-color: white;
+        border: none;
+        cursor: pointer;
+        z-index: 10;
+        margin: 1rem 0;
+        & img {
+            width: 2rem;
+        }
+      }
+    }
+  
+    &__card {
+      border-radius: 0.4rem;
+      padding: 4rem 2.5rem;
+      width: 16rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: start;
+      // margin-left: 2rem;
+      
+  
+      &__image {
+        width: 100%;
+        height: 13rem;
+        overflow: hidden;
+        margin-bottom: 1rem;
+  
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+  
+      &__content {
+        font-family: vars.$font-open-sans;
+        @include mi.flex-center;
+        gap: 1rem;
+
+        &__rating {
+            display: flex;
+            align-items: center;
+            gap: 0.2rem;
+
+            & img {
+                width: 1rem;
+            }
+        }
+
+        &__first {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            gap: 1rem;
+        }
+
+        &__details {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+        }
+
+        &__name {
+          font-size: 1.2rem;
+          font-weight: 600;
+          margin: 0;
+          color: vars.$font-2;
+        }
+  
+        &__role {
+          font-size: 1rem;
+          margin: 0;
+          color: vars.$font-2;
+        }
+  
+        &__desc {
+          font-size: 1rem;
+          margin-top: 1rem;
+          text-align: start;
+          font-family: vars.$font-open-sans;
+          color: vars.$font-2;
+        }
+      }
+    }
+  }
+  

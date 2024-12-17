@@ -1,0 +1,29 @@
+{
+    "team": [
+      {
+        "name": "Rachel Barlet",
+        "role": "Front end developer",
+        "description": "They way doctors treat urinary tract infections may be wrong, and antibiotic resistance is growing",
+        "path": "assets/team/rachel.png"
+      },
+      {
+        "name": "Michael johnson",
+        "role": "UI/UX designer",
+        "description": "Treating customers with respect earns loyalty. Dig into marketing personas that reflect real people to gain the most ",
+        "path": "assets/team/michel.png"
+      },
+      {
+        "name": "Lisa Aniston",
+        "role": "Team management",
+        "description": "Treating customers with respect earns you loyalty. Dig into marketing personas that reflect real people to.",
+        "path": "assets/team/lisa.png"
+      },
+      {
+        "name": "David Schimmer",
+        "role": "Web developer",
+        "description": "They way doctors treat urinary tract infections may be wrong, and antibiotic resistance is growing",
+        "path": "assets/team/david.png"
+      }
+    ]
+  }
+  

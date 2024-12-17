@@ -1,0 +1,124 @@
+@use '../globals/mixins' as mi;
+@use '../globals/variables' as vars;
+
+.about {
+    @include mi.flex-center;
+
+    &__content {
+        max-width: 60rem;
+        text-align: center;
+        margin-top: -10rem;
+        z-index: 1;
+        background-color: vars.$font-white;
+        box-shadow: 0 0 1rem rgba(black, 0.2);
+        border-radius: 0.2rem;
+
+        @include mi.respo('tablet') {
+            padding: 2rem 0;
+            }
+    }
+
+    &__title {
+        @include mi.flexcol-center;
+        gap: 1rem;
+        padding: 2rem;
+        color: vars.$secondary-color;
+    }
+
+    &__title h1 {
+        font-size: 3rem;
+        font-family: vars.$font-mulish;
+        font-weight: 400;
+        margin: 0;
+    }
+
+    &__line {
+        width: 10rem;
+        height: 0.2rem;
+        // margin-bottom: 2rem;
+        background-color: vars.$primary-color;
+        border-color: vars.$primary-color;
+    }
+
+    &__desc {
+        @include mi.flexcol-center;
+        padding: 0 10rem;
+        text-align: center;
+        font-family: vars.$font-open-sans;
+        color: vars.$font-2;
+        font-size: 1.2rem;
+
+        @include mi.respo('tablet') {
+        padding: 0 2rem;
+        }
+
+        &__two,
+        &__one {
+            padding: 0 1rem;
+        }
+    }
+
+    &__progress {
+        
+        @include mi.flex-center;
+        gap: 2rem;
+        padding: 2rem;
+        position: relative; 
+        margin-top: 1.5rem;
+
+        // @include mi.respo('tablet') {
+        //     display: hidden;
+        // }
+        @include mi.respo('tablet') {
+            display: none;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            top: 30%; 
+            left: 0;
+            right: 0;
+            height: 1px; 
+            background-color: vars.$secondary-color;
+            z-index: -1; 
+            width: 90%;
+            margin: 0 auto;
+        }
+    
+        &__main {
+            position: relative;
+            @include mi.flexcol-center;
+        }
+    
+        &__circle {
+            position: relative;
+            z-index: 1;
+            padding: 0.2rem;
+            border: 1px solid vars.$secondary-color;
+            @include mi.flex-center;
+            border-radius: 50%;
+            width: 2.5rem; 
+            height: 2.5rem;
+            background-color: vars.$font-white;
+    
+            img {
+                width: 1.2rem; 
+                height: 1.2rem;
+            }
+        }
+
+        &__title {
+            font-family: vars.$font-open-sans;
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: vars.$font-2;
+            text-transform: uppercase;
+            width: 60%;
+            text-align: start;
+            margin-left: auto;
+        }
+    }
+    
+    
+
+}

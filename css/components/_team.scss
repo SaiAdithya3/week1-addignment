@@ -1,0 +1,115 @@
+@use '../globals/mixins' as mi;
+@use '../globals/variables' as vars;
+
+.team {
+    margin: 3rem 0;
+    @include mi.flexcol-center;
+
+    &__title {
+        @include mi.flexcol-center;
+        gap: 1rem;
+        padding: 2rem;
+    }
+
+    &__title h1 {
+        font-size: 3rem;
+        font-family: vars.$font-mulish;
+        font-weight: 400;
+        margin: 0;
+    }
+
+    &__line {
+        width: 5rem;
+        height: 0.2rem;
+        background-color: vars.$primary-color;
+    }
+
+    &__carousel {
+        position: relative;
+        overflow: hidden;
+        padding: 2rem;
+        margin: 0 2rem;
+
+
+        &__track {
+            display: flex;
+            gap: 2rem;
+            transition: transform 0.5s ease;
+            @include mi.respo('mobile') {
+                gap: 1rem;
+                flex-direction: column;
+            }
+        }
+
+        &__card {
+            flex: 0 0 300px; 
+            // width: 20rem;
+            background: #fff;
+            border-radius: 0.5rem;
+            // padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+
+            &__image img {
+                width: 100%;
+                height: 15rem;
+                border-radius: 0.5rem 0.5rem 0 0;
+                // margin-bottom: 1rem;
+            }
+            @include mi.respo('mobile') {
+                flex: 0 0 100%;
+            width: 20rem;
+            }
+
+            &__content {
+                padding: 0.5rem 1.5rem;
+                &__name {
+                    font-size: 1.5rem;
+                    font-family: vars.$font-mulish;
+                    text-align: start;
+                    margin-bottom: 0;
+                    font-weight: 600;
+                    color: vars.$secondary-color;
+                }
+
+                &__role {
+                    font-size: 1rem;
+                    color: vars.$font-2;
+                    margin-top: 0.2rem;
+                    margin-bottom: 1rem;
+                    font-family: vars.$font-open-sans;
+                    text-align: start;
+                }
+
+                &__desc {
+                    font-size: 0.9rem;
+                    color: vars.$font-2;
+                    font-family: vars.$font-open-sans;
+                    text-align: start;
+                }
+            }
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        margin-top: 0rem;
+        margin: 2rem 0;
+        @include mi.respo('tablet') {
+            // flex-direction: column;
+            // gap: 1rem;
+            display: none;
+        }
+
+        &__btn {
+            background: vars.$font-white;
+            color: vars.$secondary-color;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            border: none;
+            font-size: 1.2rem;
+        }
+    }
+}

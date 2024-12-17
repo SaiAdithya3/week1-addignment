@@ -1,0 +1,25 @@
+{
+  "socials": [
+    {
+      "name": "youtube",
+      "path": "assets/images/yt.png"
+    },
+
+    {
+      "name": "twitter",
+      "path": "assets/icons/twitter.png"
+    },
+    {
+      "name": "facebook",
+      "path": "assets/images/link.jpg"
+    },
+    {
+      "name": "instagram",
+      "path": "assets/icons/fb.svg"
+    },
+    {
+      "name": "linkedin",
+      "path": "assets/icons/instagram.png"
+    }
+  ]
+}

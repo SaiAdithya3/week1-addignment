@@ -1,0 +1,20 @@
+{
+    "about": [
+      {
+        "name": "Updated knowledge",
+        "description": "They all live tidily together in teams. We focus on the all-round development of individuals and participation in co-curricular activities.",
+        "path": "assets/about/book.svg"
+      },
+      {
+        "name": "We are relaible",
+        "description": "They all live tidily together in teams. We focus on the all-round development of individuals and participation in co-curricular activities.",
+        "path": "assets/about/handshake.svg"
+      },
+      {
+        "name": "Time mangement",
+        "description": "They all live tidily together in teams. We focus on the all-round development of individuals and participation in co-curricular activities.",
+        "path": "assets/about/clock.svg"
+      }
+    ]
+  }
+  

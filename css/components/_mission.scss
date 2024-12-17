@@ -1,0 +1,67 @@
+@use '../globals/mixins' as mi;
+@use '../globals/variables' as vars;
+
+.mission {
+    height: 40rem;
+    margin: 4rem 0;
+    display: flex;
+
+    &__left {
+        width: 50%;
+
+        &__img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @include mi.respo('tablet') {
+            display: none;
+        }
+    }
+
+    &__right {
+        background-color: vars.$primary-color;
+        width: 50%;
+        height: 100%;
+        @include mi.flexcol-center;
+
+        @include mi.respo('tablet') {
+            width: 100%;
+        }
+
+        &__title {
+            color: vars.$font-white;
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            font-family: vars.$font-mulish;
+            text-transform: uppercase;
+        }
+
+        &__desc {
+            color: vars.$font-white;
+            @include mi.flexcol-center;
+            font-family: vars.$font-mulish;
+            text-align: center;
+            width: 70%;
+            font-size: 1.2rem;
+            line-height: 1.5rem;
+
+            @include mi.respo('tablet') {
+                width: 90%;
+            }
+        }
+
+        &__btn {
+            padding: 1rem 2.5rem;
+            margin-top: 1rem;
+            border-radius: 0.2rem;
+            background-color: vars.$primary-color;
+            border: 2px solid vars.$font-white;
+            font-size: 1rem;
+            color: vars.$font-white;
+            font-family: vars.$font-mulish;
+        }
+    }
+}

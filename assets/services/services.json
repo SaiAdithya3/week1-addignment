@@ -1,0 +1,35 @@
+{
+    "services": [
+      {
+        "name": "Web design & development",
+        "description": "We work with you to develop a user experience which delivers value to your audience. Value means repeat visits and referrals via social media and other channels.",
+        "path": "assets/services/web-design.svg"
+      },
+      {
+        "name": "Maintenance & support",
+        "description": "Software maintenance and support services involve both appilication and product maintenance.",
+        "path": "assets/services/maintainance.svg"
+      },
+      {
+        "name": "Newsletters & landing page",
+        "description": "A newsletter landing page is a really great way to stay engaged with your leads and stay on their minds and even increase your sales. ",
+        "path": "assets/services/newsletter.svg"
+      },
+      {
+        "name": "Content writing",
+        "description": "Our content writers are experts at creating blog posts that boost SEO, engage readers, and promote social interaction.",
+        "path": "assets/services/content-writing.svg"
+      },
+      {
+        "name": "Computer projects",
+        "description": "We provide projects guidance for every academic course like diploma, BE, BTech in computer engineering. We do care about your project importance because once we were also the students.",
+        "path": "assets/services/computer-projects.svg"
+      },
+      {
+        "name": "Redesigning projects",
+        "description": "We work with you to develop a user experience which delivers value to your audience. Value means repeat visits and referrals via social media and other channels.",
+        "path": "assets/services/redesigning.svg"
+      }
+    ]
+  }
+  

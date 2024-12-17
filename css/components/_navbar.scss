@@ -1,0 +1,118 @@
+@use '../globals/mixins' as mi;
+@use '../globals/variables' as vars;
+
+.navbar {
+    font-family: vars.$font-mulish;
+    background-color: vars.$font-white;
+    @include mi.flexcol-center;
+    position: relative;
+    padding: 1rem 2rem;
+
+    &__logo {
+        width: 7.5rem;
+        height: 7.5rem;
+    }
+
+    &__title {
+        @include mi.flex-center;
+        margin: 0;
+        &__one {
+            color: vars.$bg-color;
+        }
+        &__two {
+            color: vars.$font-color;
+        }
+    }
+
+    &__list {
+        display: flex;
+        gap: 1rem;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        &__item {
+            padding: 0.5rem 1rem;
+
+            &__link,
+            &__link:visited,
+            &__link:active {
+                text-decoration: none;
+                color: vars.$font-color;
+                font-size: 1.25rem;
+                transition: color 0.3s;
+
+                &:hover {
+                    color: vars.$primary-color;
+                }
+            }
+        }
+    }
+
+    &__toggle {
+        display: none;
+        position: absolute;
+        top: 1rem;
+        right: 2rem;
+        width: 2rem;
+        height: 2rem;
+        cursor: pointer;
+        z-index: 10;
+
+        span {
+            display: block;
+            width: 100%;
+            height: 0.25rem;
+            background-color: vars.$font-color;
+            margin: 0.3rem 0;
+            transition: all 0.3s ease;
+        }
+
+        &--active {
+            span:nth-child(1) {
+                transform: translateY(0.6rem) rotate(45deg);
+            }
+            span:nth-child(2) {
+                opacity: 0;
+            }
+            span:nth-child(3) {
+                transform: translateY(-0.6rem) rotate(-45deg);
+            }
+        }
+    }
+
+    @include mi.respo(mobile) {
+        & {
+            @include mi.flex-center;
+            flex-direction: column;
+        }
+
+        &__list {
+            display: none;
+            flex-direction: column;
+            gap: 0.5rem;
+            background-color: vars.$font-white;
+            width: 100%;
+            padding: 1rem;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+            &--active {
+                display: flex;
+            }
+        }
+
+        &__toggle {
+            display: block;
+        }
+    }
+
+    @include mi.respo(tablet) {
+        &__list {
+            flex-direction: row;
+            gap: 2rem;
+        }
+    }
+}

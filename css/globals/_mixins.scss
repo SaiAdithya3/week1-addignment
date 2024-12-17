@@ -1,0 +1,48 @@
+@import 'variables';
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flexcol-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin respo($breakpoint) {
+    @if $breakpoint ==desktop-large {
+        @media only screen and (min-width: 110rem) {
+            // 1760px
+            @content;
+        }
+    }
+
+    @else if $breakpoint ==desktop {
+        @media only screen and (max-width: 90rem) {
+            // 1440px
+            @content;
+        }
+    }
+
+    @else if $breakpoint ==tablet {
+        @media only screen and (max-width: 56.25rem) {
+            // 900px
+            @content;
+        }
+    }
+
+    @else if $breakpoint ==mobile {
+        @media only screen and (max-width: 48rem) {
+            // 480px
+            @content;
+        }
+    }
+
+    @else {
+        @warn "No valid breakpoint provided.";
+    }
+}

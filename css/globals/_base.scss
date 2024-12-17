@@ -1,0 +1,15 @@
+@use '../globals/mixins' as mi;
+@use '../globals/variables' as vars;
+
+:root {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    // @include mi.flexcol-center;
+    // width: 100%;
+}

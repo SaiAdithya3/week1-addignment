@@ -1,0 +1,102 @@
+@use '../globals/mixins' as mi;
+@use '../globals/variables' as vars;
+
+.footer {
+    &__cta {
+        background-color: vars.$primary-color;
+        color: vars.$font-white;
+        @include mi.flex-center;
+        padding: 4rem;
+
+        &__content {
+            @include mi.flexcol-center;
+
+            &__title {
+                font-family: vars.$font-mulish;
+                font-weight: 600;
+                font-size: 3rem;
+
+                @include mi.respo('mobile') {
+                    font-size: 2rem;
+                }
+
+                text-align: center;
+            }
+
+            &__desc {
+                font-family: vars.$font-open-sans;
+                font-weight: 400;
+                font-size: 1.2rem;
+                margin-top: 1rem;
+                text-align: center;
+                width: 50%;
+
+                @include mi.respo('tablet') {
+                    width: 100%;
+                }
+            }
+
+            &__input {
+                background-color: vars.$font-white;
+                border: none;
+                padding: 0.5rem 1rem;
+                margin-top: 1rem;
+                color: vars.$font-2;
+                width: 20rem;
+                @include mi.respo('tablet') {
+                    width: 15rem;
+                }
+            }
+        }
+    }
+
+
+    &__contact {
+        background-color: vars.$font-white;
+        color: vars.$secondary-color;
+        padding: 4rem;
+        display: flex;
+
+        @include mi.respo('mobile') {
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        &__copyright {
+            display: flex;
+            width: 50%;
+            align-items: start;
+            flex-direction: column;
+
+            &--copy,
+            &--rights {
+                margin: 0;
+                font-family: vars.$font-open-sans;
+            }
+
+            @include mi.respo('mobile') {
+                width: 100%;
+                @include mi.flex-center;
+            }
+        }
+
+        &__socials {
+            display: flex;
+            width: 50%;
+            justify-content: end;
+            align-items: center;
+            gap: 0.6rem;
+
+            @include mi.respo('mobile') {
+                width: 100%;
+                @include mi.flex-center;
+            }
+
+            &__icon {
+                width: 1.2rem;
+                height: 1.2rem;
+                object-fit: contain;
+            }
+        }
+    }
+}

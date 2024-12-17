@@ -1,0 +1,27 @@
+{
+  "testimonials": [
+    {
+      "name": "Amy Goldsberg",
+      "role": "CEO at Coca Cola",
+      "description": "Feucilius. At preprotious of cubile easus senectious various socis suspendecious integer suspendise tutpris serectum perefectureque nibh ioxulis.",
+      "path": "assets/testimonials/amy.png"
+    },
+    {
+      "name": "John Jandali",
+      "role": "CTO at Loom",
+      "description": "Eros nulla mollis nec tortor. Eu class ante accumsan habitant morbi neque hac purus magnis varius pulvinar hac pede magnis.",
+      "path": "assets/testimonials/john.png"
+    },
+    {
+      "name": "Lina Sloan",
+      "role": "Content writer at Uber",
+      "description": "Eros nulla mollis nec tortor. Eu class ante accumsan habitant morbi neque hac purus magnis varius pulvinar hac pede magnis.",
+      "path": "assets/testimonials/lina.png"
+    },
+    {
+      "name": "Robert Sloan",
+      "description": "Feucilius. At preprotious of cubile easus senectious various socis suspendecious integer suspendise tutpris serectum perefectureque nibh ioxulis.",
+      "path": "assets/testimonials/robert.png"
+    }
+  ]
+}

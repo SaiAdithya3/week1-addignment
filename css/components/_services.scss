@@ -1,0 +1,87 @@
+@use '../globals/mixins' as mi;
+@use '../globals/variables' as vars;
+
+.services {
+    margin: 3rem 0;
+
+    &__title {
+        @include mi.flexcol-center;
+        gap: 1rem;
+        padding: 2rem;
+    }
+
+    &__title h1 {
+        font-size: 3rem;
+        font-family: vars.$font-mulish;
+        font-weight: 400;
+        margin: 0;
+    }
+
+    &__line {
+        width: 5rem;
+        height: 0.2rem;
+        background-color: vars.$primary-color;
+    }
+
+    &__cards {
+        display: grid;
+        margin: 0 6rem;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        padding: 2rem;
+
+        @include mi.respo('desktop') {
+            padding: 2rem 2rem;
+            margin: 0rem;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @include mi.respo('tablet') {
+            padding: 2rem 2rem;
+            margin: 0 2rem;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include mi.respo('mobile') {
+            padding: 2rem 2rem;
+            margin: 0;
+            grid-template-columns: repeat(1, 1fr);
+
+        }
+
+    }
+
+    &__card {
+        background: #fff;
+        padding: 1.5rem;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: translateY(-10px);
+        }
+
+        &__image img {
+            width: 6rem;
+            height: auto;
+            margin-bottom: 1rem;
+        }
+
+        &__content {
+            &__title {
+                font-size: 1.6rem;
+                font-weight: 400;
+                margin-bottom: 0.5rem;
+                font-family: vars.$font-mulish;
+            }
+
+            &__desc {
+                font-size: 1.2rem;
+                line-height: 1.5rem;
+                color: vars.$font-2;
+                font-family: vars.$font-open-sans;
+            }
+        }
+    }
+}
