@@ -1,0 +1,19 @@
+# Allow all robots complete access by default
+User-agent: *
+Allow: /
+
+# Prevent crawling of build/cache directories
+Disallow: /.parcel-cache/
+Disallow: /dist/
+Disallow: /node_modules/
+
+# Allow crawling of important content directories
+Allow: /assets/
+Allow: /css/
+Allow: /js/
+
+# Specify the sitemap location (if you create one in the future)
+# Sitemap: https://yourwebsite.com/sitemap.xml
+
+# Crawl-delay directive for rate limiting (optional)
+Crawl-delay: 10
