@@ -15,9 +15,7 @@
     &__content {
         height: 100%;
         @include mi.flexcol-center;
-        max-width: 34rem;
-        // height: full;
-        
+        max-width: 34rem;        
     }
 
     &__title {
@@ -45,17 +43,18 @@
         
         @include mi.respo('tablet') {
             flex-direction: column;
-
+            align-items: center;
             gap: 1rem;
+            &__input {
+                width: 100%;
+            }
         }
         &__input {
-            // width: 100%;
             padding: 1rem;
             border-radius: 0.2rem;
             border: none;
             font-family: vars.$font-open-sans;
             font-size: 1rem;
-            // margin-right: 1.2rem;
         }
         &__btn {
             padding: 1rem;

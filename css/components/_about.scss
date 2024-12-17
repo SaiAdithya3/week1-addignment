@@ -15,7 +15,7 @@
 
         @include mi.respo('tablet') {
             padding: 2rem 0;
-            }
+        }
     }
 
     &__title {
@@ -49,7 +49,7 @@
         font-size: 1.2rem;
 
         @include mi.respo('tablet') {
-        padding: 0 2rem;
+            padding: 0 2rem;
         }
 
         &__two,
@@ -59,11 +59,11 @@
     }
 
     &__progress {
-        
+
         @include mi.flex-center;
         gap: 2rem;
         padding: 2rem;
-        position: relative; 
+        position: relative;
         margin-top: 1.5rem;
 
         // @include mi.respo('tablet') {
@@ -72,24 +72,25 @@
         @include mi.respo('tablet') {
             display: none;
         }
+
         &::before {
             content: '';
             position: absolute;
-            top: 30%; 
+            top: 30%;
             left: 0;
             right: 0;
-            height: 1px; 
+            height: 1px;
             background-color: vars.$secondary-color;
-            z-index: -1; 
+            z-index: -1;
             width: 90%;
             margin: 0 auto;
         }
-    
+
         &__main {
             position: relative;
             @include mi.flexcol-center;
         }
-    
+
         &__circle {
             position: relative;
             z-index: 1;
@@ -97,12 +98,12 @@
             border: 1px solid vars.$secondary-color;
             @include mi.flex-center;
             border-radius: 50%;
-            width: 2.5rem; 
+            width: 2.5rem;
             height: 2.5rem;
             background-color: vars.$font-white;
-    
+
             img {
-                width: 1.2rem; 
+                width: 1.2rem;
                 height: 1.2rem;
             }
         }
@@ -118,7 +119,7 @@
             margin-left: auto;
         }
     }
-    
-    
+
+
 
 }

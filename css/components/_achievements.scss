@@ -81,6 +81,7 @@
             width: 50%;
             font-family: vars.$font-open-sans;
             text-align: center;
+
             @include mi.respo('tablet') {
                 width: 80%;
             }
@@ -94,14 +95,14 @@
             justify-content: space-between;
 
             @include mi.respo('mobile') {
-               flex-wrap: wrap;
+                flex-wrap: wrap;
                 width: 100%;
                 justify-content: space-around;
                 align-items: center;
 
                 &__number {
-                     width: 45%;
-                     @include mi.flexcol-center;
+                    width: 45%;
+                    @include mi.flexcol-center;
                 }
             }
 

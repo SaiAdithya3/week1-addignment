@@ -43,6 +43,9 @@
                 margin-top: 1rem;
                 color: vars.$font-2;
                 width: 20rem;
+                font-size: 1.2rem;
+                color: vars.$font-2;
+
                 @include mi.respo('tablet') {
                     width: 15rem;
                 }

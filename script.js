@@ -1,12 +1,22 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const toggleButton = document.querySelector(".navbar__toggle");
-  const nav = document.querySelector(".navbar__nav");
+  const toggle = document.querySelector(".navbar__toggle");
+  const navList = document.querySelector(".navbar__list");
+  const overlay = document.querySelector(".navbar__overlay");
 
-  toggleButton.addEventListener("click", () => {
-      toggleButton.classList.toggle("navbar__toggle--active");
-      nav.classList.toggle("navbar__nav--active");
-  });
+  const toggleNavbar = () => {
+    toggle.classList.toggle("navbar__toggle--active");
+    navList.classList.toggle("navbar__list--active");
+    navbar__list__item__link.classList.toggle("navbar__list__item__link--active");
+    overlay.style.display = navList.classList.contains("navbar__list--active")
+      ? "block"
+      : "none";
+  };
+
+  toggle.addEventListener("click", toggleNavbar);
+  overlay.addEventListener("click", toggleNavbar);
+  navList.addEventListener("click", toggleNavbar);
 });
+
 
 
 const renderAchievementsCards = async () => {
